@@ -1,4 +1,4 @@
-### Fullstack React GraphQL TypeScript Tutorial - Ben Awad
+# Fullstack React GraphQL TypeScript Tutorial - Ben Awad
 
 A fullstack project course that teaches you how to build a backend and frontend from scratch then deploy it. 
 
