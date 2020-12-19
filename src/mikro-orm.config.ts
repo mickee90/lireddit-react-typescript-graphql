@@ -1,7 +1,8 @@
 import { __prod__ } from "./constants";
-import { Post } from "./entities/Posts";
+import { Post } from "./entities/Post";
 import { MikroORM } from "@mikro-orm/core"
 import path from "path";
+import { User } from "./entities/User";
 
 // export as Parameters<...> works kind of the same way as 
 // "as const" below, but it cast the object to exactly what the init
@@ -11,9 +12,9 @@ export default {
     path: path.join(__dirname, "./migrations"),
     pattern: /^[\w-]+\d+\.[tj]s$/
   }, 
-  entities: [Post],
-  dbName: process.env.POSTGRES_DBNAME,
-  password: process.env.POSTGRES_PASSWORD, 
+  entities: [Post, User],
+  dbName: "lireddit",
+  password: "postgres", 
   type: 'postgresql',
   debug: !__prod__
 } as Parameters<typeof MikroORM.init>[0];
